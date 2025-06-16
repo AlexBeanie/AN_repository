@@ -16,5 +16,5 @@ def backPropagation (y, y_pred, input, z):
    #gradient of the second weight
     L_w2 = L_y * y_z * input[1] 
     
-    print(f"Weight gradients: [{L_w1}, {L_w2}]")
+    print(f"Weight gradients: [{L_w1}, {L_w2}]\n")
     return L_w1, L_w2
