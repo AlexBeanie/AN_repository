@@ -8,7 +8,7 @@ def forwardPass (w, x, b):
     z = w[0]*x[0] + w[1]*x[1] + b
     print(f"This is the linear result of the forward pass: {z}")
     
-    # Add nonlineality with activation function
+    # Add nonlinearity with activation function
     sig = sigmoid(z)
     print(f"This is the result after using an activation function: {sig}\n")
     return sig, z

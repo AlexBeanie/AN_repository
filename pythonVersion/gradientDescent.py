@@ -1,10 +1,8 @@
-def gradientDescent (weights, lr, gradients):
-    # Calculate the new weight of the first input
-    weights[0] = weights[0] - lr * gradients[0]
-    
-    # Calculate the new weight of the second input
-    weights[1] = weights[1] - lr * gradients[1]
-    
-    print(f"These are the updated weights for the neuron: [{weights[0]}, {weights[1]}]\n")
-    
-    return weights
+def gradientDescent(weights, bias, lr, grads, db):
+    # Update weights
+    weights[0] -= lr * grads[0]
+    weights[1] -= lr * grads[1]
+    # Update bias
+    bias       -= lr * db
+    print(f"[Update] weights = [{weights[0]:.4f}, {weights[1]:.4f}], bias = {bias:.4f}\n")
+    return weights, bias
